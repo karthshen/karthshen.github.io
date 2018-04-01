@@ -11,7 +11,7 @@ tags:
 ---
 ﻿
 
-##GitHub Clean for Untracked Files
+## GitHub Clean for Untracked Files
 
 So sometimes after updating .gitignore it doesn't immediately reflect on the current changes in your git repository. The following commands should be able to clean the current git cache and allow you to commit a clean changelist.
 
