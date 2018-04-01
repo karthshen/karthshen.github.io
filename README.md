@@ -1,313 +1,121 @@
-# Attention
-Because of the server, [joytou.github.io](https://github.com/joytou/joytou.github.io) has moved from [`joytou.github.io`](https://github.com/joytou/joytou.github.io) to [`JOYTOU`](https://github.com/joytou/JOYTOU). And no longer supported for [`joytou.github.io`](https://github.com/joytou/joytou.github.io), but you can still use it as a blog template.
-# JOYTOU
-JOYTOU(http://joytou.net.cn) is a BootStrap blog template developed by Joytou Wu. You can create your blog by forking or copying this project. JOYTOU works fine with Git. You can use Coding、GitHub、BitBucket、GitLab as your Git repository. JOYTOU is free and you can change it to suit your theme.
+# Poole
 
-# Content
+*The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
 
-| Directory | 目录 | 目錄 | 
-|:----------:|:----------:|:----------:|
-| [English](#en) | [简体中文](#cn)| [繁體中文](#tw) |
-| [Introduction](#introduction) | [概述](#概述) | [概述](#概述) |
-| [Features](#features) | [功能特色](#功能特色) | [功能特色](#功能特色)|
-| [Native Server](#native-server) | [服务版本](#服务版本) | [服務版本](#服務版本) |
-| [File directories](Mainfest.md) | [文件目录](Mainfest.md) | [文件目錄](Mainfest.md) |
-| [Configurations](#configurations) | [配置](#配置) | [配置](#配置) |
-| [Writting article](#writting-article) | [写文章](#写文章) | [寫文章](#寫文章) |
-| [License](#license) | [许可协议](#许可协议) | [許可協議](#許可協議)|
+-----
 
--------
+Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@mdo](https://twitter.com/mdo) to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.
 
-# en
+![Poole](https://f.cloud.github.com/assets/98681/1834359/71ae4048-73db-11e3-9a3c-df38eb170537.png)
 
-## Introduction
-JOYTOU(http://joytou.nets.hk) is a BootStrap blog template developed by Joytou Wu. You can create your blog by forking or copying this project. JOYTOU works fine with Git. You can use Coding、GitHub、BitBucket、GitLab as your Git repository. JOYTOU is free and you can change it to suit your theme. But no matter what, you must keep the copyright.
+See Poole in action with [the demo site](http://demo.getpoole.com).
 
-## Features
-1. BootStrap style
-2. Blog basic functions
-3. Top navigation bar
-4. Automatically generate Sitemap.xml
-5. View the article by date, category, tag, etc.
-6. The important articles can be placed at the top
-7. Article sharing
-8. Multi-language
-9. Article comment
-10. Global search
-11. JQuery responsive design
+There are currently two official themes built on Poole:
 
-## Native Server
-Clone from github.com:
+* [Hyde](http://hyde.getpoole.com)
+* [Lanyon](http://lanyon.getpoole.com)
 
-- Clone with SSH:
-```
-git clone git@github.com:joytou/joytou.github.io.git
+Individual theme feedback and bug reports should be submitted to the theme's individual repository.
+
+
+## Contents
+
+- [Usage](#usage)
+- [Options](#options)
+  - [Rems, `font-size`, and scaling](#rems-font-size-and-scaling)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
+
+
+## Usage
+
+### 1. Install dependencies
+
+Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS. Before getting started, you'll need to install the Jekyll gem:
+
+```bash
+$ gem install jekyll
 ```
 
-- Clone with HTTPS:
+**Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
+
+**Need syntax highlighting?** Poole includes support for Pygments or Rouge, so install your gem of choice to make use of the built-in styling. Read more about this [in the Jekyll docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
+
+### 2a. Quick start
+
+To help anyone with any level of familiarity with Jekyll quickly get started, Poole includes everything you need for a basic Jekyll site. To that end, just download Poole and start up Jekyll.
+
+### 2b. Roll your own Jekyll site
+
+Folks wishing to use Jekyll's templates and styles can do so with a little bit of manual labor. Download Poole and then copy what you need (likely `_layouts/`, `*.html` files, `atom.xml` for RSS, and `public/` for CSS, JS, etc.).
+
+### 3. Running locally
+
+To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/poole` (or whatever your Jekyll site's root directory is named):
+
+```bash
+$ jekyll serve
 ```
-git clone https://github.com/joytou/joytou.github.io.git
+
+Open <http://localhost:4000> in your browser, and voilà.
+
+### 4. Serving it up
+
+If you host your code on GitHub, you can use [GitHub Pages](https://pages.github.com) to host your project.
+
+1. Fork this repo and switch to the `gh-pages` branch.
+  1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
+  2. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/poole`, use `http://username.github.io/poole/`. **Be sure to include the trailing slash.**
+3. Done! Head to your GitHub Pages URL or custom domain.
+
+No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
+
+## Options
+
+Poole includes some customizable options, typically applied via classes on the `<body>` element.
+
+
+### Rems, `font-size`, and scaling
+
+Poole is built almost entirely with `rem`s (instead of pixels). `rem`s are like `em`s, but instead of building on the immediate parent's `font-size`, they build on the root element, `<html>`.
+
+By default, we use the following:
+
+```css
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
+
 ```
 
-## Configurations
-in _config.yml:
+To easily scale your site's typography and components, simply customize the base `font-size`s here.
 
-| Key | Value | Annotation |
-|:----------:|:----------:|:----------|
-|      email      |      1540294142@qq.com      |       Your e-mail address     |
-|      author      |      Joytou Wu      |      The article author's name      |
-|       url     |     http://joytou.nets.hk       |      Your site address, and do not add  `/`  in the end      |
-|     github       |      https://github.com/joytou/      |      Your github account address      |
-|      github_username      |      joytou      |       Your github account name     |
-|      repo      |      joytou.github.io      |      Your repository name     |
-|      owner_name      |      joytou      |      The site owner name      |
-|     description       |      ---      |     Your site description       |
-|      keywords      |      ---      |      Your site keywords, and it must listted as array      |
-|       remind     |      BOOL      |       Whether to remind you to upgrade the latest version when there is the latest version.     |
-|      BaiduSiteVerification      |      ---      |      The string of Baidu Site Verification. If you didn't have, left it blank.      |
-|      51la      |      ---      |      The String of 51.la statistic's id. If you didn't have, left it blank.       |
-|       51lamb     |      ---      |      The style of 51.la statistic's data reference.       |
-> Please refer to the official website for other variables.
 
-in each /_data/(languages code).yml:
+## Development
 
-| Key | Value | Annotation |
-|:----------:|:----------:|:----------|
-| sitename | JOYTOU | Your site name |
-| sitesubname | An amateur programmer who loves to sit around and refuse to rest! | Your site subname |
-| sitedescription | This blog template build by builder from style | Your site descriphtion(please keeping the string: 'builder', 'style') |
-| siteabout | JOYTOU was done by me (Joytou). If you like this template, you can subsidize me a little. | Writting something about your site or yourself(yourselves) |
+Poole has two branches, but only one is used for active development.
 
-## Writting article
-post format:
-```
---- 
-layout: post 
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
-title:  test       
-#article title 
+CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
 
-date:   2015-04-05 08:00:00 +0800     
-#publish date 
+## Author
 
-nav: post     
-
-stickie: true         
-#Make the article stick to the top if true 
-
-category: official         
-#the category for the article 
-
-tags: [log, bootstrap, joytou]     
-#the tags for the article, it should be a array 
---- 
-* content 
-{:toc} 
-
-Summary Content
-#Summary content. 
-
-<!-- more --> 
-
-Article mainly content
-#Writting the article here. 
-```
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
 
 
 ## License
-By using the Service, you [agree to comply with all the terms of this Agreement](https://github.com/joytou/joytou.github.io/raw/master/LICENSE).
- 
--------
 
-# cn
+Open sourced under the [MIT license](LICENSE.md).
 
-## 概述
-JOYTOU(http://joytou.nets.hk) 是一款由Joytou Wu基于Bootstrap开发的博客模板。您可以通过fork或者复制本项目进行创建您的博客。JOYTOU集成了Git代码版本控制，用户可以选择 Coding、GitHub、BitBucket、GitLab 等任意的代码仓库。JOYTOU是免费的，您可以更改以适应您的主题。但不管如何您务必保留相关版权。
-
-## 功能特色
-1. BootStrap样式
-2. 博客基本功能
-3. 顶部导航栏
-4. 自动Sitemap.xml
-5. 通过日期、类别、标签等分类文章
-6. 重要文章可置顶
-7. 文章分享
-8. 多语言
-9. 文章评论
-10. 全局搜索
-11. JQuery响应式设计
-
-## 服务版本
-从Github克隆项目：
-
-- 用SSH克隆：
-```
-git clone git@github.com:joytou/joytou.github.io.git
-```
-
-- 用HTTPS克隆：
-```
-git clone https://github.com/joytou/joytou.github.io.git
-```
-
-## 配置
-_config.yml:
-
-| 键 | 值 | 备注 |
-|:----------:|:----------:|:----------|
-|      email      |      1540294142@qq.com      |       您的电子邮件地址     |
-|      author      |      Joytou Wu      |      文章作者名称      |
-|       url     |     http://joytou.nets.hk       |      您的网址，末尾不能加上 `/`       |
-|     github       |      https://github.com/joytou/      |      您的Github用户地址      |
-|      github_username      |      joytou      |       您的Github用户名     |
-|      repo      |      joytou.github.io      |      您的repository名字     |
-|      owner_name      |      joytou      |      网站所有者名字      |
-|     description       |      ---      |     网站的描述       |
-|      keywords      |      ---      |      网站的关键词，必须以数组形式列出      |
-|       remind     |      BOOL      |       是否提醒可升级新版本     |
-|      BaiduSiteVerification      |      ---      |      百度网站的验证码。如果没有，请留空白      |
-|      51la      |      ---      |      51.la网站的统计id。如果没有，请留空白       |
-|       51lamb     |      ---      |      51.la数据引用的样式       |
-> 其它变量请参考官网的介绍。
-
-各个 /_data/(语言代码).yml 文件:
-
-| 键 | 值 | 备注 |
-|:----------:|:----------:|:----------|
-| sitename | JOYTOU | 您的网站名称 |
-| sitesubname | 一个热爱折腾、不肯休息的业余程序员！ | 您的网站副名称 |
-| sitedescription | 此博客模板由builder通过style创建 | 您的网站描述(请保留字符串：'builder'、'style') |
-| siteabout | JOYTOU是由我(Joytou)单独完成的。如果您喜欢此模板，可以对此模板小额资助。 | 一些关于您的网站或者您(们)的信息 |
-
-## 写文章
-文章格式：
-```
---- 
-layout: post 
-
-title:  test       
-#文章标题 
-
-date:   2015-04-05 08:00:00 +0800     
-#发布日期 
-
-nav: post     
-
-stickie: true         
-#如果为true则文章置顶 
-
-category: official         
-#文章的分类 
-
-tags: [log, bootstrap, joytou]     
-#文章的标签，必须是数组 
---- 
-* content 
-{:toc} 
-
-Summary Content
-#摘要内容 
-
-<!-- more --> 
-
-Article mainly content
-#在这儿写文章
-```
-
-## 许可协议
-一旦您使用本服务，即表示[您同意遵循本协议的所有约定](https://github.com/joytou/joytou.github.io/raw/master/LICENSE)。
-
--------
-
-# tw 
-
-## 概述 
-JOYTOU(http://joytou.nets.hk) 是一款由Joytou Wu基於Bootstrap開發的博客模板。您可以通過fork或者復製本項目進行創建您的博客。 JOYTOU集成了Git代碼版本控制，用戶可以選擇 Coding、GitHub、BitBucket、GitLab 等任意的代碼倉庫。 JOYTOU是免費的，您可以更改以適應您的主題。但不管如何您務必保留相關版權。 
-
-## 功能特色 
-1. BootStrap樣式 
-2. 博客基本功能 
-3. 頂部導航欄 
-4. 自動Sitemap.xml 
-5. 通過日期、類別、標籤等分類文章 
-6. 重要文章可置頂 
-7. 文章分享 
-8. 多語言 
-9. 文章評論 
-10. 全局搜索 
-11. JQuery響應式設計 
-
-## 服務版本 
-從Github克隆項目： 
-
-- 用SSH克隆： 
-``` git clone git@github.com:joytou/joytou.github.io.git ``` 
-
-- 用HTTPS克隆： 
-``` git clone https://github.com/joytou/joytou.github.io.git ``` 
-
-## 配置 
-_config.yml: 
-
-| 鍵 | 值 | 備註 | 
-|:----------:|:----------:|:----------| 
-| email | 1540294142@qq.com | 您的電子郵件地址 | 
-| author | Joytou Wu | 文章作者名稱 | 
-| url | http://joytou.nets.hk | 您的網址，末尾不能加上 `/` | 
-| github | https://github.com/joytou/ | 您的Github用戶地址 | 
-| github_username | joytou | 您的Github用戶名 | 
-| repo | joytou.github.io | 您的repository名字 | 
-| owner_name | joytou | 網站所有者名字 | 
-| description | --- | 網站的描述 | 
-| keywords | --- | 網站的關鍵詞，必須以數組形式列出 | 
-| remind | BOOL | 是否提醒可升級新版本 | 
-| BaiduSiteVerification | --- | 百度網站的驗證碼。如果沒有，請留空白 | 
-| 51la | --- | 51.la網站的統計id。如果沒有，請留空白 | 
-| 51lamb | --- | 51.la數據引用的樣式 | 
-> 其它變量請參考官網的介紹。 
-
-各個 /_data/(語言代碼).yml 文件:
-
-| 鍵 | 值 | 備註 |
-|:----------:|:----------:|:----------|
-| sitename | JOYTOU | 您的網站名稱 |
-| sitesubname | 一個熱愛折騰、不肯休息的業餘程序員！ | 您的網站副名稱 |
-| sitedescription | 此博客模板由builder通過style創建 | 您的網站描述(請保留字符串：'builder'、'style') |
-| siteabout | JOYTOU是由我(Joytou)單獨完成的。如果您喜歡此模板，可以對此模板小額資助。 | 一些關於您的網站或者您(們)的信息 |
-## 寫文章
-post format:
-```
---- 
-layout: post 
-
-title:  test       
-#文章標題
-
-date:   2015-04-05 08:00:00 +0800     
-#發佈日期
-
-nav: post     
-
-stickie: true         
-#如果為true則文章置頂
-
-category: official         
-#文章的分類
-
-tags: [log, bootstrap, joytou]     
-#文章的標籤，必須是數組
---- 
-* content 
-{:toc} 
-
-Summary Content
-#摘要內容
-
-<!-- more --> 
-
-Article mainly content
-#在這兒寫文章
-```
-
-## 許可協議 
-一旦您使用本服務，即表示[您同意遵循本協議的所有約定](https://github.com/joytou/joytou.github.io/raw/master/LICENSE)。
+<3
