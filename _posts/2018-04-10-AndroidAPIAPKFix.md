@@ -15,5 +15,9 @@ tags:
 After installing Android Studio, it somehow messes with the API that's previously installed on my computer.
 
 # Fix #
- After some trail and errors, it seems like installing/uninstalling stuff in SDK Manager happen to fix the issue.
+ ~~After some trail and errors, it seems like installing/uninstalling stuff in SDK Manager happen to fix the issue.~~
 
+### Update ###
+1. Uninstall Android SDK under C:/Program Files
+2. Uninstall Codeworks with Uninstall batch under NVPACK.
+3. Reinstall NVPACK with the codework for android
