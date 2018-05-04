@@ -54,3 +54,6 @@ etc.
 
 ## Conclusion ##
 - Epic did not do a good job at documenting the functionality of ```GetInputTouchState()```, basically this function will get you the state of the touch operation you request (one figer, two fingers, etc). And by using this method, you can get a good information of what user did and perform methods base on that.
+
+- Also shot out to this guy for getting me to the right direction
+- https://chrysalisinteractive.wordpress.com/2016/12/02/touch-and-drag-camera-tutorial-both-blueprint-and-c/
