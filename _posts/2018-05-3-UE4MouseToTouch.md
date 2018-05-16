@@ -40,16 +40,16 @@ etc.
 	- This code will tell the application that, when the mouse is pressed, check the status of ```Touch1```, and the function call ``GetInputTouchState()``` will return the Location.X, Location.Y, and whether the user is holding the touch. The variables are returned by passing by reference.
 
 3. Now under a tick function, write something like the following code to calculate the DeltaLocation for the touch operation. 
-		```
-		if (Cast<ATytoPlayerController>(Controller)->GetIsTouchPressed(ETouchIndex::Touch1)) {
-			Cast<ATytoPlayerController>(Controller)->GetInputTouchState(ETouchIndex::Touch1, Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation.X, Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation.Y, Cast<ATytoPlayerController>(Controller)->bIsTouchOneCurrentlyPressed);
-			FVector deltaTouchLocation = Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation - Cast<ATytoPlayerController>(Controller)->OldTouchOneLocation;
-			//deltaTouchLocation.X *= -1.0f;
+```
+if (Cast<ATytoPlayerController>(Controller)->GetIsTouchPressed(ETouchIndex::Touch1)) {
+	Cast<ATytoPlayerController>(Controller)->GetInputTouchState(ETouchIndex::Touch1, Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation.X, Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation.Y, Cast<ATytoPlayerController>(Controller)->bIsTouchOneCurrentlyPressed);
+	FVector deltaTouchLocation = Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation - Cast<ATytoPlayerController>(Controller)->OldTouchOneLocation;
+	//deltaTouchLocation.X *= -1.0f;
 
-			DeltaTouchOneOffset = deltaTouchLocation;
-			Cast<ATytoPlayerController>(Controller)->OldTouchOneLocation = Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation;
-		}
-		```
+	DeltaTouchOneOffset = deltaTouchLocation;
+	Cast<ATytoPlayerController>(Controller)->OldTouchOneLocation = Cast<ATytoPlayerController>(Controller)->NewTouchOneLocation;
+}
+```
 4. And finally, you can use the result of the calculation (deltaLocation) in your rotation code.
 
 ## Conclusion ##
