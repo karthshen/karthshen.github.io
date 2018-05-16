@@ -2,7 +2,7 @@
 layout:     post
 title:      "UE4 Nativization with NDK (Android)"
 subtitle:   " \"Nativization issue?\""
-date:       2018-04-10 15:43:00
+date:       2018-05-14 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
 catalog: true
