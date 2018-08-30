@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      "Change the JAVA_HOME on Mac OS "
+subtitle:   " \"Accidently using Java 10?\""
+date:       2018-08-30 15:43:00
+author:     "Karth"
+header-img: "img/home-bg-geek.jpg"
+catalog: true
+tags:
+    - Mac OS X
+    - Java
+---
+
+# What Happened #
+The `brew cask install java` installed Java 10 on my computer, and some of my libraries ran into problems with Java 10 as the default JAVA_HOME Directory. 
+
+Installing with `brew cask install java8` didn't help, because though it installs Java 8 on my Mac, it couldn't change the default JAVA_HOME location. 
+
+# Soluton for the Issue #
+After running into a few compatibility problems with my applications, I ended up using 
+```
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+```
+
+1. Run the above shell command in the terminal should resolve the Java compatibility issue for this terminal session.
+2. Attach the above command in ` ~/.bash_profile ` should change the default location for JAVA_HOME. 
+3. If the default version for Java needs to be something different, just adjust the parameter at the end of the command accordingly. 
