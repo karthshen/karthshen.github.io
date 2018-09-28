@@ -4,7 +4,7 @@ title:      "Git Etiquette"
 subtitle:   " \"Why and how to use Rebase\""
 date:       2018-09-28 15:43:00
 author:     "Karth"
-header-img: "img/home-bg-geek.jpg"
+header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
 tags:
     - Git
