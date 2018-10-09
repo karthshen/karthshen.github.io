@@ -4,7 +4,7 @@ title:      "Portfolio"
 subtitle:   " \"Enjoy?\""
 date:       2018-10-08 15:43:00
 author:     "Karth"
-header-img: "mg/post-bg-unix-linux.jpg"
+header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
 tags:
     - Unity
