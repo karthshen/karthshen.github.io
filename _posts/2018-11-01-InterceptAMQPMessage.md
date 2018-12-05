@@ -2,7 +2,7 @@
 layout:     post
 title:      "Intercept AMQP Outbound Message"
 subtitle:   " \"Some thoughts\""
-date:       2018-10-05 15:43:00
+date:       2018-11-01 15:43:00
 author:     "Karth"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
