@@ -107,38 +107,38 @@ I will need to have some sort of Interceptor to intercept the AMQP message. And 
 - **Before**
   ```json
     {
-    "schemaVersion": "1.0.0",
-    "id": "79c97f40-6a3f-4475-891b-7e5c251749ba",
-    "timestamp": "2018-10-30T14:54:11.583Z",
-    "tenantId": null,
-    "type": "pay.deductions.DeductionCreated",
-    "body": {
-    ...
-    }
-    "metadata": {
+        "schemaVersion": "1.0.0",
+        "id": "79c97f40-6a3f-4475-891b-7e5c251749ba",
+        "timestamp": "2018-10-30T14:54:11.583Z",
+        "tenantId": null,
+        "type": "pay.deductions.DeductionCreated",
+        "body": {
+        ...
+        }
+        "metadata": {
 
-    }
+        }
     ```
 - **After**
     ```json
     {
-    "schemaVersion": "1.0.0",
-    "id": "79c97f40-6a3f-4475-891b-7e5c251749ba",
-    "timestamp": "2018-10-30T14:54:11.583Z",
-    "tenantId": null,
-    "type": "pay.deductions.DeductionCreated",
-    "body": {
-    ...
-    }
-    "metadata": {
-        "tenantId": "d0de813b-c3d8-4be5-876a-6c96c31ea7d3",
-        "correlationId": "cd75ea39-04ae-473c-ad16-b6467c1d06e1",
-        "trace": {
-            "X-B3-TraceId": "2c47cedc82b363d9",
-            "X-B3-SpanId": "2c47cedc82b363d9",
-            "X-Span-Export": "false"
+        "schemaVersion": "1.0.0",
+        "id": "79c97f40-6a3f-4475-891b-7e5c251749ba",
+        "timestamp": "2018-10-30T14:54:11.583Z",
+        "tenantId": null,
+        "type": "pay.deductions.DeductionCreated",
+        "body": {
+        ...
         }
-    },
+        "metadata": {
+            "tenantId": "d0de813b-c3d8-4be5-876a-6c96c31ea7d3",
+            "correlationId": "cd75ea39-04ae-473c-ad16-b6467c1d06e1",
+            "trace": {
+                "X-B3-TraceId": "2c47cedc82b363d9",
+                "X-B3-SpanId": "2c47cedc82b363d9",
+                "X-Span-Export": "false"
+            }
+        },
         "aggregateId": "55def832-8312-4dbb-9366-6f33ffb6d548",
         "sequenceNumber": "0"
     }

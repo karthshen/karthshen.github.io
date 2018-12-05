@@ -14,11 +14,56 @@ tags:
 
 # Git Etiquette - How to keep the Git history Clean
 
+## Basic git operations and git flow
+
+[https://www.atlassian.com/git/tutorials/comparing-workflows]
+
+This is a good article to read on the topic of comparing different git flows.
+
 ## Why is it important to keep the histories clean?
 
 - It is beneficial to use sane git history practices to ensure that when things need to get merged or when something needs to get reverted.
 - It is easy to pick out a sensible change set without having to do crazy cherry picking. 
 - We use `git rebase` to accomplish this.
+
+## Differences between Merge and Rebase
+- **Merges**
+    - In a **merge**, git factors the time at which you made changes in a branch and interleaves them with changes relative to the times they were made in the source branch. 
+    - For Example, given the following master commit history and branch commit history:
+        ```json
+        master
+
+        Commit A 01-17-2017 09:00 AM: Bob - Added some stuff
+        Commit B 01-17-2017 10:45 AM: John - Fixed a thing
+
+        feature-MyFeature
+
+        Commit C1 01-16-2017 05:00 PM: Joe - Starting some feature
+        Commit C2 01-17-2017 09:30 PM: Joe - Finishing some feature
+        ```
+    - After the merge, it becomes something like:
+        ```json
+        feature-MyFeature
+
+        Commit C1 01-16-2017 05:00 PM: Joe - Starting some feature
+        Commit A  01-17-2017 09:00 AM: Bob - Added some stuff
+        Commit C2 01-17-2017 09:30 PM: Joe - Finishing some feature
+        Commit B  01-17-2017 10:45 AM: John - Fixed a thing
+        ```
+    - As you see here, the commit history is combined base on the time the commits are made. This may make sense for smaller projects with a couple developers as it becomes less significant, but this does not scale well as your project grows larger.
+- **Rebase**
+    - On the other hand, in a *rebase,* git essentially treats your changes as if they were made after any changes in the source branch you are rebase off of.
+    - With the same example above, a `git rebase` operation would make something like following:
+        ```json
+        feature-MyFeature
+
+        Commit A  01-17-2017 09:00 AM: Bob - Added some stuff
+        Commit B  01-17-2017 10:45 AM: John - Fixed a thing
+        Commit D1 01-17-2017 11:00 AM: Joe - Starting some feature
+        Commit D2 01-17-2017 11:00 AM: Joe - Finishing some feature
+        ```
+    - Rebase will remove the commits you make and generate the same amount of new commits. The benefits here is that your git commit history will be much cleaner, and time of commit becomes less significant here.
+    - **However**, rebase is pretty much rewriting git history, and you must use `git push --force` in order to update the branch history, which is a `destructive operation`. 
 
 ## When should you rebase?
 - You should rebase when you:
