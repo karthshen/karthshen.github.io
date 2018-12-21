@@ -125,4 +125,4 @@ Assuming you are working on a branch `feature/CoolStuff` that is based off your 
 4. `git rebase` involves force push. This may look scary, but it's okay.
 
 ### Sources
-- Git Etiquette from Ultimate Software NU Doc by @danif
+- Git Etiquette from Ultimate Software NU Doc by @danilf https://github.com/dflor003
