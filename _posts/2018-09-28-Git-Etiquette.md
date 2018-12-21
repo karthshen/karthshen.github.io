@@ -123,3 +123,6 @@ Assuming you are working on a branch `feature/CoolStuff` that is based off your 
 2. Use `git pull --rebase` instead of just `git pull` if you have committed changes.
 3. Use `git rebase` requires a certain amount of confidence and comfort with command line terminals. Do not attempt this with a Git GUI unless you are 100% confident that you know what you are doing.
 4. `git rebase` involves force push. This may look scary, but it's okay.
+
+### Sources
+- Git Etiquette from Ultimate Software NU Doc by @danif
