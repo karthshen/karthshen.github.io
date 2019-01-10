@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Debug Unreal Engine 4 projects on Chromebook "
-subtitle:   " \No Guarantee this guide will work.\""
+subtitle:   " \ No Guarantee this guide will work.\""
 date:       2018-04-12 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
