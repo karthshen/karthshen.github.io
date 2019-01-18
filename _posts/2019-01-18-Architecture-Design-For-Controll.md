@@ -2,7 +2,7 @@
 layout:     post
 title:      "Fighting Game Character Control Design"
 subtitle:   " \"State Pattern + Command Pattern\""
-date:       2018-01-18 15:43:00
+date:       2019-01-18 15:43:00
 author:     "Karth"
 header-img: "img/post-bg-unix-linux.jpg"
 catalog: true
