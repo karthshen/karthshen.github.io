@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "The Purpose of Using Java Spring"
+title:      "The Inroduction to Java Spring"
 subtitle:   " \"Maintainability and Simplicity\""
 date:       2019-05-16 15:43:00
 author:     "Karth"
