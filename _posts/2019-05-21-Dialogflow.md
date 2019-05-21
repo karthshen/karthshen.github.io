@@ -2,7 +2,7 @@
 layout:     post
 title:      "Android Build API Missing Fix"
 subtitle:   " \"Can't make an apk without api?\""
-date:       2019-04-10 15:43:00
+date:       2018-04-10 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
 catalog: true
