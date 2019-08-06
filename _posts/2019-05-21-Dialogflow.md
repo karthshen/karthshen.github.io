@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Android Build API Missing Fix"
-subtitle:   " \"Can't make an apk without api?\""
-date:       2018-04-10 15:43:00
+title:      "Dialogflow: NLP Integration"
+subtitle:   " \"The creation of UltiMatt"\""
+date:       2019-05-21 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
 catalog: true
@@ -11,9 +11,8 @@ tags:
     - Thought
 ---
 
-# Issue #
-After installing Android Studio, it somehow messes with the API that's previously installed on my computer.
+# UltiMatt #
 
-# Fix #
- After some trail and errors, it seems like installing/uninstalling stuff in SDK Manager happen to fix the issue.
+UltiMatt is what I created with my team during 2019 Ultimate Software's infamous 48 Hours Hackathon. 
 
+I was going to talk about the detailed implementation in this blog post. Sadly it has been almost three month since UltiMatt was created, and we lost after making to the top 12. So I may bring this up in the future.
