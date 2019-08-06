@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Dialogflow: NLP Integration"
-subtitle:   " \"The creation of UltiMatt"\""
+subtitle:   " \"The creation of UltiMatt\""
 date:       2019-05-21 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
