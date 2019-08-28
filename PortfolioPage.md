@@ -13,7 +13,7 @@ tags:
 
 # Table of Content
 - [Link to ArenaGame](#arenagame)
-- [Link to FF_Tactic](#fftactic)
+- [Link to FF_Tactic](#tactic)
 
 # ArenaGame
 Arena is a multi-player fighting game inspired by Super Smash Series and implemented with Unity3D game engine.
@@ -125,7 +125,7 @@ Everything beside the imports are licensed under the GPL 3.0 License. see the [L
 
 
 
-# FF_Tactic
+# Tactic
 Turn Based RPG Tactic game (Demo), inspired by the classic Final Fantasy Tactic on Gameboy.
 
 ![](https://i.imgur.com/Xqixlbe.jpg)
