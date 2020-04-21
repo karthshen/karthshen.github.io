@@ -30,7 +30,7 @@
   "description": "###[View Live Hux Blog &rarr;](https://huangxuan.me)",
   "main": "Gruntfile.js",
   "dependencies": {
-    "bootstrap": "4.1.3",
+    "bootstrap": "4.3.1",
     "font-awesome": "4.7.0"
   },
   "license": "ISC"
