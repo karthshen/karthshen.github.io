@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Deploy React Web App on GitPage"
-subtitle:   " \"If the gitpage doesn't refresh with most recent version of the app\""
+subtitle:   " \"If the GitPage doesn't refresh with most recent version of the app\""
 date:       2020-04-21 15:43:00
 author:     "Karth"
 header-img: "img/home-bg-geek.jpg"
@@ -44,4 +44,4 @@ tags:
 
     ```
     $ npm run deploy
-    ``
+    ```
